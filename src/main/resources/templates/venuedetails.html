@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>venuedetails</title>
+  <link rel="stylesheet" type="text/css" media="all"
+        th:href="@{/css/style.css}" href="/css/style.css" />
+</head>
+<body>
+  <p>test</p>
+  <h2 th:text="${venue.getVenueName()}">venuedetails</h2>
+  <p th:text="'info:                      '+${venue.getLinkMoreInfo()}"></p>
+  <p th:text="'max number of persons:     '+${venue.getCapacity()}"></p>
+  <p th:text="'food provided:             '+${venue.isFoodProvided()}"></p>
+  <p th:text="'indoor:                    '+${venue.isIndoor()}"></p>
+  <p th:text="'freeparking:               '+${venue.isFreeParkingAvailable()}"></p>
+  <p th:text="'city:                      '+${venue.getCity()}"></p>
+  <p th:text="'distance public transport: '+${venue.getDistanceFromPublicTransportInKm()}"></p>
+</body>
+</html>

@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{/css/style.css}" href="/css/style.css" />
 </head>
+<header>
+    <a th:href="@{/about}">about</a>
+    <a th:href="@{/home}">home</a>
+</header>
 <body>
+<div class="row1">
+    <div class="row1content">
+        <p th:text="|de datum van vandaag is ${currentDate}|"></p>
+        <p th:text="|je hebt tot ${currentDatePlusDertig} om te betalen|"></p>
 
+    </div>
+</div>
 </body>
 </html>
